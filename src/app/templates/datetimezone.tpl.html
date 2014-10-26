@@ -1,0 +1,38 @@
+<div class="row">
+  <div ng-if="enabled.date" class="col-xs-5" style="margin-top: 35px;">
+      <div class="form-inline">
+        <div class="form-group">
+          <label>Day</label>
+          <input type="number" min="1" max="31" class="form-control" ng-model="datemodel.day" ng-required="true" style="width: 60px;"/>
+        </div>
+        <div class="form-group">
+            <label>Month</label>
+            <input type="number" min="1" max="12" class="form-control" ng-model="datemodel.month" ng-required="true" style="width: 60px;"/>
+          </div>
+          <div class="form-group">
+            <label>Year</label>
+            <input type="number" min="1900" max="2200"class="form-control" ng-model="datemodel.year" ng-required="true" style="width: 75px;"/>
+          </div>
+    </div>
+  </div>
+  <div ng-if="enabled.time" class="col-xs-3" style="margin-top: 35px;">
+    <div class="form-inline">
+      <div class="form-group">
+        <label>Hour</label>
+        <input type="number" min="0" max="24" class="form-control" ng-model="datemodel.hour" ng-required="true" style="width: 60px;"/>
+      </div>
+      <div class="form-group">
+          <label>Minute</label>
+          <input type="number" min="0" max="59" class="form-control" ng-model="datemodel.minute" ng-required="true" style="width: 60px;"/>
+        </div>
+      </div>
+  </div>
+  <div ng-if="enabled.tz" class="col-xs-4" style="margin-top: 35px;">
+    <ui-select ng-model="timezone.selected" theme="select2" ng-disabled="disabled">
+      <ui-select-match placeholder="Select timezone">{{$select.selected}}</ui-select-match>
+      <ui-select-choices repeat="timezone in timezones | filter: $select.search">
+        <div ng-bind-html="timezone | highlight: $select.search"></div>
+      </ui-select-choices>
+    </ui-select>
+  </div>
+</div>
