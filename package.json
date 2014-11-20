@@ -1,7 +1,7 @@
 {
   "author": "Dominic Böttger",
   "name": "ngDatetimezone",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://github.com/molecuel/ngDatetimezone",
   "licenses": {
     "type": "MIT",
