@@ -60,7 +60,7 @@ angular.module( 'ngDatetimezone', [
           mydate.date(newVal);
           mydate.hour(scope.datemodel.hour);
           mydate.minute(scope.datemodel.minute);
-          mydate.month(scope.datemodel.month);
+          mydate.month(scope.datemodel.month-1);
           mydate.year(scope.datemodel.year);
           scope.tzdate = mydate;
         }
@@ -86,7 +86,7 @@ angular.module( 'ngDatetimezone', [
           mydate.hour(scope.datemodel.hour);
           mydate.minute(scope.datemodel.minute);
           mydate.date(scope.datemodel.day);
-          mydate.month(scope.datemodel.month);
+          mydate.month(scope.datemodel.month-1);
           scope.tzdate = mydate;
         }
       });
@@ -98,7 +98,7 @@ angular.module( 'ngDatetimezone', [
           mydate.hour(myhour);
           mydate.minute(scope.datemodel.minute);
           mydate.date(scope.datemodel.day);
-          mydate.month(scope.datemodel.month);
+          mydate.month(scope.datemodel.month-1);
           mydate.year(scope.datemodel.year);
           scope.tzdate = mydate;
         }
@@ -110,7 +110,7 @@ angular.module( 'ngDatetimezone', [
           mydate.minute(newVal);
           mydate.hour(scope.datemodel.hour);
           mydate.date(scope.datemodel.day);
-          mydate.month(scope.datemodel.month);
+          mydate.month(scope.datemodel.month-1);
           mydate.year(scope.datemodel.year);
           scope.tzdate = mydate;
         }
@@ -123,7 +123,7 @@ angular.module( 'ngDatetimezone', [
           mydate.hour(scope.datemodel.hour);
           mydate.minute(scope.datemodel.minute);
           mydate.date(scope.datemodel.day);
-          mydate.month(scope.datemodel.month);
+          mydate.month(scope.datemodel.month-1);
           mydate.year(scope.datemodel.year);
           scope.tzdate = mydate;
         }
